@@ -33,34 +33,30 @@ To start the authentication process with Hubspot you simply need to access `/aut
 Here's an example *Auth Hash* available in `request.env['omniauth.auth']`:
 
 ```ruby
-{
-  :provider => 'hubspot',
-  :uid => '342324',
-  :info => {
-    :email => 'kevin.antoine@hubspot.io',
-    :name => 'Kevin Antoine'
-  },
-  :credentials => {
-    :token => 'dG9rOmNdrWt0ZjtgzzE0MDdfNGM5YVe4MzsmXzFmOGd2MDhiMfJmYTrxOtA=', # OAuth 2.0 access_token, which you may wish to store
-    :expires => false
-  },
-  :extra => {
-    :raw_info => {
-      :name => 'Kevin Antoine',
-      :email => 'kevin.antoine@hubspot.io',
-      :type => 'admin',
-      :id => '342324',
-      :app => {
-        :id_code => 'abc123', # Company app_id
-        :type => 'app',
-        :secure => true # Secure mode enabled for this app
-  :timezone => "Dublin",
-  :name => "ProjectMap"
-      },
-      :avatar => {
-        :image_url => "https://static.hubspotassets.com/avatars/343616/square_128/me.jpg?1454165491"
-      }
-    }
-  }
-}
+{"provider"=>"hubspot",
+ "uid"=>nil,
+ "info"=>
+  {"uid"=>33333,
+   "hub_id"=>1111,
+   "app_id"=>2222,
+   "token_type"=>"access",
+   "scopes"=>["content", "oauth", "files"],
+   "email"=>"michael@domain.com",
+   "hub_domain"=>"domain.com"},
+ "credentials"=>
+  {"token"=>
+    "dfkjadlfkjasdkjflaskdjfjsldflasjdflkasdjflaskdjf",
+   "refresh_token"=>"lkfkjasldjkflaskjdflkasjdlfjkasdljfk",
+   "expires_at"=>1489053154,
+   "expires"=>true},
+ "extra"=>
+  {"user"=>
+    {
+     "user"=>"michael@domain.com",
+     "hub_domain"=>"domain.com",
+     "scopes"=>["content", "oauth", "files"],
+     "hub_id"=>1111,
+     "app_id"=>2222,
+     "user_id"=>33333,
+     "token_type"=>"access"}}}
 ```
